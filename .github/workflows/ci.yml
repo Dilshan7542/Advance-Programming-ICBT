@@ -2,7 +2,7 @@ name: Sunrise Dental Clinic CI
 
 on:
   push:
-    branches: [ "main", "develop" ]
+    branches: [ "main", "develop", "prod" ]
   pull_request:
     branches: [ "main" ]
 
