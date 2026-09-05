@@ -1,0 +1,26 @@
+<%@ page contentType="text/html;charset=UTF-8" %>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><c:out value="${pageTitle}" default="Sunrise Dental Clinic"/></title>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/app.css">
+</head>
+<body>
+<header class="topbar">
+    <nav class="navbar">
+        <a class="brand" href="${pageContext.request.contextPath}/dashboard">Sunrise Dental Clinic</a>
+        <a href="${pageContext.request.contextPath}/dashboard">Dashboard</a>
+        <a href="${pageContext.request.contextPath}/appointments/">Appointments</a>
+        <a href="${pageContext.request.contextPath}/appointments/add">New Appointment</a>
+        <a href="${pageContext.request.contextPath}/help">Help</a>
+        <span class="user-chip">
+            <c:out value="${sessionScope.authenticatedUser.username}"/> -
+            <c:out value="${sessionScope.authenticatedUser.role}"/>
+        </span>
+        <a href="${pageContext.request.contextPath}/logout">Exit</a>
+    </nav>
+</header>
+<main class="container">
